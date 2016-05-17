@@ -107,6 +107,36 @@ def welcome_menu
 	end
 end
 
+		if @main_menu_selection == 1
+			puts 'Here are your Entrees:'
+			puts "> Enter '4' for Meat Loaf"
+			puts "> Enter '5' for Pizza"
+			puts "> Enter '6' for Hot Dog"
+			@entree_selction = gets.strip.to_i
+				if @entree_selection = 4
+					@final_order << "meat loaf"
+					puts sides
+
+				elsif @entree_selection = 5
+					@final_order << "pizza"
+					puts sides
+
+				elsif @entree_selection = 6
+					@final_order << "hot dog"
+					puts sides
+				end
+		elsif @main_menu_selection == 2
+			puts item_descriptions
+				
+		elsif @main_menu_selection == 3 
+			puts welcome_menu
+
+		else	
+			puts 'Invalid option. Please select again'
+			welcome_menu
+		end
+end
+
 
 def entry
 	puts "You have $17 credit available in your lunch account"
